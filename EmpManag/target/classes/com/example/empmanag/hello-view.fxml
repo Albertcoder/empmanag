@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.empmanag.HelloController"
+            prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <!-- Employee Table -->
+        <TableView fx:id="employeeTable" layoutX="20.0" layoutY="20.0" prefWidth="760.0" prefHeight="300.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="200.0"/>
+                <TableColumn fx:id="typeColumn" text="Type" prefWidth="200.0"/>
+                <TableColumn fx:id="salaryColumn" text="Salary" prefWidth="200.0"/>
+            </columns>
+        </TableView>
+
+        <!-- Input Form -->
+        <VBox layoutX="20.0" layoutY="340.0" spacing="10.0">
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Name:"/>
+                        <TextField fx:id="nameField" prefWidth="200.0"/>
+                    </children>
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Type:"/>
+                        <ComboBox fx:id="typeDropdown" prefWidth="200.0"/>
+                    </children>
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Salary:"/>
+                        <TextField fx:id="salaryField" prefWidth="200.0"/>
+                    </children>
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Button text="Add Employee" onAction="#onAddEmployee"/>
+                        <Button text="Remove Selected" onAction="#onRemoveEmployee"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
